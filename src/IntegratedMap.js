@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -13,15 +12,11 @@ import {
   MenuItem,
   InputLabel,
 } from "@mui/material";
+import './App.css';
 
-function App() {
+function Map() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h3>Welcome to the WiFi Heatmap Display Project!</h3>
-        <p>Please follow the README to get started.</p>
-      </header>
-      <div style={{
+    <div style={{
         height: '70vh',
         marginBottom: '1rem',
         borderRadius: '1.5rem',
@@ -36,8 +31,10 @@ function App() {
           />
         </MapContainer>
       </div>
-    </div>
   );
 }
 
-export default App;
+export default Map;
+
+
+
