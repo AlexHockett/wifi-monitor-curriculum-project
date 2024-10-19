@@ -18,6 +18,8 @@ function Map() {
   return (
     <div style={{
         height: '70vh',
+        width: '100vw',
+        marginTop: '5px',
         marginBottom: '1rem',
         borderRadius: '1.5rem',
         borderStyle: 'solid',

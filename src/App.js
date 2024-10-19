@@ -7,6 +7,7 @@ import {
   MenuItem,
   InputLabel,
 } from "@mui/material";
+import Map from './IntegratedMap';
 
 import { useState } from "react";
 import React from 'react';
@@ -36,10 +37,12 @@ function App() {
 
   const handleResetLocation = () => {
     setLocation("");
+    window.location.reload();
   };
 
   return (
     <div className="App">   
+      <Map />
       <div className="User-prompts">
         <div className = "Left-prompts">
           <p>
@@ -55,7 +58,6 @@ function App() {
           </FormControl>
           <div className="Left-buttons">
             <Button variant = "contained" color = '' size = "small" sx = {{color: "cornflowerblue"}} onClick={handleResetLocation}> Reset Location </Button>
-            <Button variant = "contained" color = '' size = "small" sx = {{color: "cornflowerblue"}}> Refresh </Button>
           </div>
         </div>
         <div className = "Right-prompts">
@@ -77,26 +79,6 @@ function App() {
             <Button variant = "contained" color = '' size = "small" sx = {{color: "cornflowerblue"}}> Submit Feedback </Button>
           </div>
         </div>
-      </div>
-    <div className="App">
-      <header className="App-header">
-        <h3>Welcome to the WiFi Heatmap Display Project!</h3>
-        <p>Please follow the README to get started.</p>
-      </header>
-      <div style={{
-        height: '70vh',
-        marginBottom: '1rem',
-        borderRadius: '1.5rem',
-        borderStyle: 'solid',
-        borderWidth: 'thin',
-        borderColor: '#25B4E7'
-      }}>
-        <MapContainer center={[37.8719, -122.2585]} zoom={17} scrollWheelZoom={true}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-        </MapContainer>
       </div>
     </div>
   );
